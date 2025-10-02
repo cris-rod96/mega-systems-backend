@@ -1,6 +1,7 @@
 {
   "name": "mega-systems-backend",
   "version": "1.0.0",
+  "type": "module",
   "description": "API backend de Mega Systems desarrollada en Express y PostgreSQL para gestión de ventas e inteligencia de negocios.",
   "main": "index.js",
   "scripts": {
