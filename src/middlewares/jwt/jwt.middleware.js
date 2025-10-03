@@ -1,5 +1,6 @@
 import { request, response } from 'express'
 import { jwtUtils } from '../../utils/index.utils.js'
+import { User } from '../../lib/db.js'
 
 const verifyToken = async (req = request, res = response, next) => {
   try {
@@ -16,19 +17,19 @@ const verifyToken = async (req = request, res = response, next) => {
     }
 
     // Descomentar cuando esten el modelo de usuario válido
-    // const user = await User.findOne({
-    //   where: {
-    //     id,
-    //   },
-    // })
+    const user = await User.findOne({
+      where: {
+        id,
+      },
+    })
 
-    // if (!user) {
-    //   return res.status(401).json({
-    //     message: 'Petición denegada. Usuario no válido',
-    //   })
-    // }
+    if (!user) {
+      return res.status(401).json({
+        message: 'Petición denegada. Usuario no válido',
+      })
+    }
 
-    // req.user = user
+    req.user = user
     next()
   } catch (error) {
     res.status(401).json({

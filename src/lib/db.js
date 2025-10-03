@@ -5,4 +5,6 @@ const sq = new Sequelize(DATABASE_CONFIG.URI, DATABASE_CONFIG.OPTIONS)
 
 models.forEach((model) => model(sq))
 
-export { sq }
+const { User, Rol, Code } = sq.models
+
+export { sq, User, Rol, Code }
