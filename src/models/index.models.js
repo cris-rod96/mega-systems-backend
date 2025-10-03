@@ -6,8 +6,13 @@ import BrandModel from './brand/brand.model.js'
 import ProductModel from './product/product.model.js'
 import ImageModel from './image/image.model.js'
 import ServiceModel from './service/service.model.js'
+import CartModel from './cart/cart.model.js'
+import ItemModel from './item/item.model.js'
+import SaleModel from './sale/sale.model.js'
+
 export const models = [
   BrandModel,
+  CartModel,
   CodeModel,
   ImageModel,
   ProductModel,
@@ -15,4 +20,6 @@ export const models = [
   UserModel,
   CategoryModel,
   ServiceModel,
+  ItemModel,
+  SaleModel,
 ]
