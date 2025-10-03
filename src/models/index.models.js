@@ -12,6 +12,7 @@ import SaleModel from './sale/sale.model.js'
 import SaleDetailModel from './saleDetail/saleDetail.model.js'
 import ReviewModel from './review/review.model.js'
 import FavoriteModel from './favorite/favorite.model.js'
+import ViewModel from './view/view.model.js'
 
 export const models = [
   BrandModel,
@@ -28,4 +29,5 @@ export const models = [
   SaleDetailModel,
   ReviewModel,
   FavoriteModel,
+  ViewModel,
 ]
