@@ -9,6 +9,9 @@ import ServiceModel from './service/service.model.js'
 import CartModel from './cart/cart.model.js'
 import ItemModel from './item/item.model.js'
 import SaleModel from './sale/sale.model.js'
+import SaleDetailModel from './saleDetail/saleDetail.model.js'
+import ReviewModel from './review/review.model.js'
+import FavoriteModel from './favorite/favorite.model.js'
 
 export const models = [
   BrandModel,
@@ -22,4 +25,7 @@ export const models = [
   ServiceModel,
   ItemModel,
   SaleModel,
+  SaleDetailModel,
+  ReviewModel,
+  FavoriteModel,
 ]
