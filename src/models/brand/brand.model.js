@@ -2,31 +2,17 @@ import { DataTypes } from 'sequelize'
 
 export default (conn) => {
   conn.define(
-    'Category',
+    'Brand',
     {
       id: {
         type: DataTypes.UUID,
         primaryKey: true,
         defaultValue: DataTypes.UUIDV4,
       },
-
       name: {
         type: DataTypes.STRING,
         allowNull: false,
         unique: true,
-      },
-
-      description: {
-        type: DataTypes.TEXT,
-        allowNull: true,
-      },
-
-      photo: {
-        type: DataTypes.STRING,
-        allowNull: false,
-        validate: {
-          isUrl: true,
-        },
       },
 
       isActive: {

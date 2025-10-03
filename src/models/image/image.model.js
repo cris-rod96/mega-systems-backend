@@ -2,7 +2,7 @@ import { DataTypes } from 'sequelize'
 
 export default (conn) => {
   conn.define(
-    'Category',
+    'Image',
     {
       id: {
         type: DataTypes.UUID,
@@ -10,18 +10,7 @@ export default (conn) => {
         defaultValue: DataTypes.UUIDV4,
       },
 
-      name: {
-        type: DataTypes.STRING,
-        allowNull: false,
-        unique: true,
-      },
-
-      description: {
-        type: DataTypes.TEXT,
-        allowNull: true,
-      },
-
-      photo: {
+      url: {
         type: DataTypes.STRING,
         allowNull: false,
         validate: {
@@ -29,14 +18,19 @@ export default (conn) => {
         },
       },
 
-      isActive: {
-        type: DataTypes.BOOLEAN,
-        defaultValue: true,
+      publicId: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        unique: true,
       },
 
-      createdAt: {
-        type: DataTypes.DATE,
-        defaultValue: DataTypes.NOW,
+      ProductId: {
+        type: DataTypes.UUID,
+        allowNull: false,
+        references: {
+          model: 'Products',
+          key: 'id',
+        },
       },
     },
     {
