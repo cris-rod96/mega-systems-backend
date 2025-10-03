@@ -5,7 +5,7 @@ import CategoryModel from './category/category.model.js'
 import BrandModel from './brand/brand.model.js'
 import ProductModel from './product/product.model.js'
 import ImageModel from './image/image.model.js'
-
+import ServiceModel from './service/service.model.js'
 export const models = [
   BrandModel,
   CodeModel,
@@ -14,4 +14,5 @@ export const models = [
   RolModel,
   UserModel,
   CategoryModel,
+  ServiceModel,
 ]
