@@ -32,6 +32,15 @@ export default (conn) => {
         type: DataTypes.UUID,
         allowNull: false,
         references: {
+          model: 'Products',
+          key: 'id',
+        },
+      },
+
+      CartId: {
+        type: DataTypes.UUID,
+        allowNull: false,
+        references: {
           model: 'Carts',
           key: 'id',
         },
