@@ -1,4 +1,4 @@
-import { Sequelize, DataTypes } from 'sequelize'
+import { DataTypes } from 'sequelize'
 
 export default (conn) => {
   conn.define(
