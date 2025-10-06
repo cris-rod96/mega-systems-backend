@@ -21,6 +21,11 @@ export default (conn) => {
         allowNull: true,
       },
 
+      isActive: {
+        type: DataTypes.BOOLEAN,
+        defaultValue: true,
+      },
+
       createdAt: {
         type: DataTypes.DATE,
         allowNull: true,
